@@ -3,22 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <title>XaH - Profile</title>
+
 <style>
     body {
-        background-color: #0a0a0a;
-        color: #00ff9f;
-        font-family: Consolas, monospace;
         margin: 0;
-        padding: 20px;
+        background: black;
+        overflow: hidden;
+        font-family: Consolas, monospace;
+        color: #00ff9f;
+    }
+
+    canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 0;
     }
 
     .container {
+        position: relative;
+        z-index: 1;
         max-width: 700px;
-        margin: auto;
-        border: 1px solid #00ff9f33;
+        margin: 50px auto;
         padding: 20px;
+        background: rgba(5,5,5,0.9);
+        border: 1px solid #00ff9f33;
         box-shadow: 0 0 15px #00ff9f22;
-        background: #050505;
     }
 
     h1 {
@@ -26,13 +36,9 @@
         text-shadow: 0 0 10px #00ffea;
     }
 
-    .tag {
-        color: #ff004c;
-    }
+    .tag { color: #ff004c; }
 
-    .section {
-        margin-top: 20px;
-    }
+    .section { margin-top: 20px; }
 
     .glow {
         text-shadow: 0 0 5px #00ff9f, 0 0 10px #00ff9f;
@@ -56,6 +62,8 @@
 </head>
 
 <body>
+<canvas id="matrix"></canvas>
+    
 <div class="container">
 
 <h1>[ XaH ]</h1>
